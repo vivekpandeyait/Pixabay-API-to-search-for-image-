@@ -1,0 +1,115 @@
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: 400 16px Open Sans;
+}
+
+.searchInput {
+  display: block;
+  border: none;
+  outline: none;
+  padding: 5px 0;
+  margin: 20px auto;
+  font-size: 16px;
+  border-bottom: 1px solid black;
+  position: relative;
+}
+  focus {
+    border-bottom: 2px solid black;
+  }
+
+
+.loading {
+  display: none; 
+  text-align: center;
+  padding: 0 1em;
+}
+
+.wrapper {
+  display: none; 
+  margin: 0.5em auto;
+  padding: 0 0.5em;
+  
+
+  
+
+  @media(max-width: 680px) {
+    width: 100% !important;
+
+    .image {
+      width: calc(100% - 5em) !important;
+      height: 150px;
+   
+      background-position: center !important;
+      background-size: cover !important;
+      
+    }
+  }
+
+}
+  .image {
+    margin: 0.2em;
+    float: left;
+    width:  auto;
+    height: auto;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    transition: box-shadow 0.2s;
+  }
+    
+   
+
+    .hidden {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+     
+      transform: translate(-50%, 200%) scale(0);
+      text-align: center;
+      transition: transform 0.2s;
+      color: white;
+    }
+
+  .image:hover {
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+      transform: scale(1.0);
+  
+    }
+      .overlay {
+        opacity: 1;
+      }
+    
+      .hidden {
+        top: 50%;
+        transform: translate(-50%, -50%) scale(1);
+      }
+      
+          
+
+          i{
+            font-size: 19px;
+            font-weight: 700;
+          }
+      
+    
+             
+@media screen and (max-width: 992px) {
+    .wrapper.image {
+        width: 400px;
+        height: 350px;
+      }
+  }
+  
+
+  @media screen and (max-width: 600px ) {
+    .image{
+    
+      width: 200px;
+      height: 200px;
+    }
+  }
